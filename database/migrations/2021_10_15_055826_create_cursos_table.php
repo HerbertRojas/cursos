@@ -15,6 +15,13 @@ class CreateCursosTable extends Migration
     {
         Schema::create('cursos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable()->constrained('users');
+            $table->string('titulo')->unique();
+            $table->string('descripcion',200);
+            $table->string('imagen')->nullable();
+            $table->float('precio');
+            $table->boolean('destacado')->default(false);
+            $table->foreignId('estado_curso_id')->nullable()->constrained('estado_cursos');
             $table->timestamps();
         });
     }

@@ -14,7 +14,8 @@ class CursoController extends Controller
      */
     public function index()
     {
-        //
+        $cursos = Curso::filtered();
+        return view('principal.cursos.inicio',compact('cursos'));
     }
 
     /**
