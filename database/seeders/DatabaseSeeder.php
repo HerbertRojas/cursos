@@ -2,7 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\EstadoCurso;
+use App\Models\UnidadTipo;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Storage::deleteDirectory('categorias');
+        Storage::makeDirectory('categorias');
+        Storage::deleteDirectory('cursos');
+        Storage::makeDirectory('cursos');
+        Storage::deleteDirectory('unidades');
+        Storage::makeDirectory('unidades');
         // \App\Models\User::factory(10)->create();
+        $this->call([
+            RoleSeeder::class,
+            UserSeeder::class,
+            EstadoCursoSeeder::class,
+            CategoriaSeeder::class,
+            UnidadTipoSeeder::class,
+            CursoSeeder::class,
+        ]);
     }
 }
