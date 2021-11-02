@@ -3,8 +3,13 @@
 {
     position: fixed;
     z-index: 999998;
+<<<<<<< HEAD
     top: 0px;
     left: 0px;
+=======
+    top: 0;
+    left: 0;
+>>>>>>> 4bb0768a06fbe738ec05408ae5c6c24f89b525c8
     width: 100%;
     height: 100%;
 }
@@ -441,4 +446,8 @@
 .jc-tiny.jc-bootstrap-4-theme .jc-arrow-bottom.jc-arrow-hug-right.jc-arrow-super-hug
 {
     bottom: -18px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4bb0768a06fbe738ec05408ae5c6c24f89b525c8
